@@ -1,0 +1,33 @@
+{
+  "name": "nws-webpack",
+  "version": "1.0.0",
+  "description": "Introduction to webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zharkan/nws-webpack.git"
+  },
+  "author": "Gaylord Julien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zharkan/nws-webpack/issues"
+  },
+  "homepage": "https://github.com/Zharkan/nws-webpack#readme",
+  "devDependencies": {
+    "css-loader": "^6.3.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0",
+    "webpack-serve": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.1"
+  }
+}
