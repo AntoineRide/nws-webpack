@@ -1,13 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const MinifyHtmlWebpackPlugin = require('minify-html-webpack-plugin');
 
 module.exports = {
   mode: "development",
   resolve: {
     modules: ['node_modules'],
   },
-  plugins: [new MiniCssExtractPlugin()],
   entry: {
     app: "./src/index.js"
   },
@@ -17,7 +17,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, '/'),
+      directory: path.join(__dirname, '/src/html'),
     },
     compress: true,
     port: 9000,
@@ -37,4 +37,18 @@ module.exports = {
       new CssMinimizerPlugin(),
     ],
   },
+  plugins: [
+    new MinifyHtmlWebpackPlugin({
+        src: './src/html',
+        dest: './public',
+        rules: {
+            collapseBooleanAttributes: true,
+            collapseWhitespace: true,
+            removeAttributeQuotes: true,
+            removeComments: true,
+            minifyJS: true,
+        }
+    }),
+    new MiniCssExtractPlugin()
+]
 };
