@@ -42,31 +42,7 @@ Pour pouvoir minifier le HTML, on va utiliser un plugin Webpack qui va tout simp
 vers le dossier de build (/public).
 `npm install minify-html-webpack-plugin --save-dev`
 `mkdir src/html && touch src/html/index.html`
-Voici un template de base à copier dans le fichier HTML :
-
-`
-
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mon Restaurant</title>
-    <link rel="stylesheet" href="app.css" />
-  </head>
-  <body>
-
-    <div class="container">
-      <div class="d-flex align-items-center pt-3 row" id="todays_specials"></div>
-    </div>
-    <div class="container">
-      <div class="d-flex align-items-center pt-3 row" id="seasons_specials"></div>
-    </div>
-    <script src="app.bundle.js"></script>
-
-  </body>
-</html>
-`
+Voici un template de base à copier dans le fichier HTML [ici](https://github.com/Zharkan/nws-webpack/blob/e5407e02cf6f066df656b400720606e5051f4391/src/html/index.html).
 
 ## Minifier le CSS
 
