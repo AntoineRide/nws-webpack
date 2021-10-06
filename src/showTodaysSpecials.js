@@ -23,9 +23,10 @@ export default async function showTodaysSpecials() {
       var suggestionsContainer = document.getElementById("todays_specials");
   
       suggestionsArrays.forEach(function (suggestionsArray) {
-        var h3 = document.createElement("h3");
-        h3.textContent = suggestionsArray;
-        suggestionsContainer.appendChild(h3);
+        var suggestionDiv = document.createElement("div");
+        suggestionDiv.textContent = suggestionsArray;
+        suggestionDiv.className = "menu-objet-nom";
+        suggestionsContainer.appendChild(suggestionDiv);
       });
     } catch (e) {
       console.log("Error", e);
