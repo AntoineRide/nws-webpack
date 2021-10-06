@@ -12,12 +12,12 @@ export default async function showStories() {
         ];
       }
       var storiesContainer = document.getElementById("stories_container");
-  
-      storiesArray.forEach(function (suggestionsArray) {
+      
+      storiesArray.forEach(function (storiesArray) {
         var storiesDiv = document.createElement("div");
-        storiesDiv.innerHTML = suggestionsArray;
-        storiesDiv.className = "menu-objet-nom";
-        storiesContainer.appendChild(storiesDiv);
+        storiesDiv.innerHTML = storiesArray;
+        storiesContainer.append(storiesDiv);
+        return storiesDiv;
       });
     } catch (e) {
       console.log("Error", e);
