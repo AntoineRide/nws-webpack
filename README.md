@@ -80,7 +80,7 @@ Référence pour les filtres :
 ## But du jeu
 
 Réaliser une structure onepage reprenant les suggestions du jour, les spécialités de saison et en bonus si votre temps le permet
-l'histoire du restaurant pour mettre en avant le restaurant et ses produits. Faire le maximum pour avoir un code lisible et comprenable.
+l'histoire du restaurant pour mettre en avant le restaurant et ses produits. Faire le maximum pour avoir un code lisible et compréhensif.
 
 ## Ressources utiles
 
