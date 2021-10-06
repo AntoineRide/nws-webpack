@@ -42,7 +42,7 @@ Pour pouvoir minifier le HTML, on va utiliser un plugin Webpack qui va tout simp
 vers le dossier de build (/public).
 `npm install minify-html-webpack-plugin --save-dev`
 `mkdir src/html && touch src/html/index.html`
-Voici un template de base à copier dans le fichier HTML [ici](https://github.com/Zharkan/nws-webpack/blob/e5407e02cf6f066df656b400720606e5051f4391/src/html/index.html).
+Voici un template de base à copier dans le fichier HTML [ici](https://github.com/Zharkan/nws-webpack/blob/main/src/html/index.html).
 
 ## Minifier le CSS
 
@@ -58,7 +58,7 @@ Même opération pour minfier le JS :
 ## Configuration initiale
 
 Afin de pouvoir lancer Webpack et démarrer le serveur de développement, voici un exemple
-de configuration pour `webpack.config.json` [ici](https://github.com/Zharkan/nws-webpack/blob/2e238c31ea4aed4fcfb3e71db0b7988b4790ef77/webpack.config.js)
+de configuration pour `webpack.config.json` [ici](https://github.com/Zharkan/nws-webpack/blob/main/webpack.config.js)
 
 ## C'est parti !
 
