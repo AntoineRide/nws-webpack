@@ -1,4 +1,4 @@
-import retrieveSeasonsSpecials from "./queries/seasonsSpecials.js";
+import retrieveSeasonsSpecials from "../queries/seasonsSpecials.js";
 
 const apiUrl = "https://api.gill-cote-bistro.fr";
 

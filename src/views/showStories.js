@@ -1,4 +1,4 @@
-import retrieveStories from "./queries/stories";
+import retrieveStories from "../queries/stories";
 
 export default async function showStories() {
     try {
