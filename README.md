@@ -34,7 +34,7 @@ la démonstration le fichier "bootstrap.css". Ce dernier étant absolument gigan
 un autre plugin pour Webpack :
 `npm i purgecss-webpack-plugin -D`
 Ce plugin va nous permettre de supprimer toutes les classes CSS non utilisées dans le projet du bundle final.
-Télécharger Bootstrap (utiliser au choix soit le CSS complet "bootstrap.css" ou juste la grid) [ici](https://github.com/twbs/bootstrap/releases/download/v5.0.2/bootstrap-5.0.2-dist.zip)
+Télécharger Bootstrap (utiliser au choix soit le CSS complet "bootstrap.css" ou juste la grid) [ici](https://github.com/twbs/bootstrap/releases/download/v5.0.2/bootstrap-5.0.2-dist.zip).
 
 ## Minify HTML
 
