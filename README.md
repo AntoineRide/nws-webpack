@@ -90,9 +90,9 @@ Maintenant on a tout ce qu'il faut pour démarrer un projet contenant un fichier
 un fichier d'entrée pour Webpack `index.js`. Pour ce cours nous allons utiliser l'API d'un restaurant.
 La base de l'API est `https://api.gill-cote-bistro.fr`, voici les différents endpoints qui nous intéressent :
 
-[Spécialités de saison](https://api.gill-cote-bistro.fr/specials?_sort=id:asc) ;
-[Suggestions du jour](https://api.gill-cote-bistro.fr/suggestions?_sort=id:asc) ;
-[Histoire du restaurant](https://api.gill-cote-bistro.fr/histoires?_sort=id:asc) ;
+1. [Spécialités de saison](https://api.gill-cote-bistro.fr/specials?_sort=id:asc) ;
+2. [Suggestions du jour](https://api.gill-cote-bistro.fr/suggestions?_sort=id:asc) ;
+3. [Histoire du restaurant](https://api.gill-cote-bistro.fr/histoires?_sort=id:asc) ;
 
 Pour plus de simplicité vous remarquerez que les ID associés aux différentes données de l'API sont
 déjà envoyés par ordre croissant. Je vous conseille de garder ça. Il existe d'ailleurs d'autres filtres
@@ -108,13 +108,13 @@ l'histoire du restaurant pour mettre en avant le restaurant et ses produits. Fai
 
 ## Ressources utiles
 
-[https://developer.mozilla.org/fr/docs/Web/API/Fetch_API](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API)
-[https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch)
-[https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web/5577766-compilez-et-executez-votre-code](https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web/5577766-compilez-et-executez-votre-code)
-[https://github.com/webpack-contrib/css-loader](https://github.com/webpack-contrib/css-loader)
-[https://webpack.js.org/guides/getting-started/](https://webpack.js.org/guides/getting-started/)
-[https://webpack.js.org/configuration/resolve/](https://webpack.js.org/configuration/resolve/)
-[https://ideas.byteridge.com/webpack-minifying-your-production-bundle/](https://ideas.byteridge.com/webpack-minifying-your-production-bundle/)
+1. [https://developer.mozilla.org/fr/docs/Web/API/Fetch_API](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API)
+2. [https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch)
+3. [https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web/5577766-compilez-et-executez-votre-code](https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web/5577766-compilez-et-executez-votre-code)
+4. [https://github.com/webpack-contrib/css-loader](https://github.com/webpack-contrib/css-loader)
+5. [https://webpack.js.org/guides/getting-started/](https://webpack.js.org/guides/getting-started/)
+6. [https://webpack.js.org/configuration/resolve/](https://webpack.js.org/configuration/resolve/)
+7. [https://ideas.byteridge.com/webpack-minifying-your-production-bundle/](https://ideas.byteridge.com/webpack-minifying-your-production-bundle/)
 
 https://webpack.js.org/configuration/resolve/
 
