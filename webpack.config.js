@@ -2,14 +2,14 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MinifyHtmlWebpackPlugin = require("minify-html-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
 const PurgecssPlugin = require('purgecss-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 const glob = require('glob')
+
 
 const PATHS = {
   src: path.join(__dirname, 'src')
 }
-
 
 module.exports = {
   mode: "production",
@@ -36,9 +36,17 @@ module.exports = {
         test: /.s?css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
+      {
+
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+
+        type: 'asset/resource',
+
+      },
     ],
   },
   optimization: {
+    minimize: true,
     minimizer: [
       new CssMinimizerPlugin(),
       new TerserPlugin()
@@ -58,7 +66,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new PurgecssPlugin({
-      paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
-    }),
+        paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+      }),
   ],
 };
