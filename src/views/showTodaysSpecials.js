@@ -1,4 +1,4 @@
-import retrieveTodaysSpecials from "./queries/todaySpecials";
+import retrieveTodaysSpecials from "../queries/todaySpecials";
 
 export default async function showTodaysSpecials() {
     try {
