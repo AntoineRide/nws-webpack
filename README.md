@@ -12,7 +12,7 @@ les builds chez Vercel à partir de ça.
 Lancer la commande `npm init` dans le répertoire racine du projet. On y renseigne toutes les infos et on y ajoute le repo
 précédemment créé.
 
-## On installer les plugins nécessaires
+## Installer les plugins nécessaires
 
 Installer les pugins nécessaire à l'utilisation de Webpack pour ce projet et Webpack lui-même :
 `npm install css-loader css-minimizer-webpack-plugin mini-css-extract-plugin minify-html-webpack-plugin purgecss-webpack-plugin webpack webpack-cli webpack-dev-server webpack-serve`
