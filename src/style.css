@@ -1,0 +1,8 @@
+.menu-objet-nom {
+    font-weight: 400;
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 10px;
+    /*à retirer si ardoise n'est pas présente*/
+    text-align: center;
+  }
