@@ -82,65 +82,42 @@ Même opération pour minfier le JS :
 ## Configuration initiale
 
 Afin de pouvoir lancer Webpack et démarrer le serveur de développement, voici un exemple
-de configuration pour `webpack.config.json` :
+de configuration pour `webpack.config.json` [ici](https://github.com/Zharkan/nws-webpack/blob/2e238c31ea4aed4fcfb3e71db0b7988b4790ef77/webpack.config.js)
 
-`const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const MinifyHtmlWebpackPlugin = require("minify-html-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const PurgecssPlugin = require('purgecss-webpack-plugin');
-const glob = require('glob')
+## C'est parti !
 
-const PATHS = {
-src: path.join(\_\_dirname, 'src')
-}
+Maintenant on a tout ce qu'il faut pour démarrer un projet contenant un fichier HTML `src/html/index.html`,
+un fichier d'entrée pour Webpack `index.js`. Pour ce cours nous allons utiliser l'API d'un restaurant.
+La base de l'API est `https://api.gill-cote-bistro.fr`, voici les différents endpoints qui nous intéressent :
 
-module.exports = {
-mode: "production",
-resolve: {
-modules: ["node_modules"],
-},
-entry: {
-app: "./src/index.js",
-},
-output: {
-filename: "[name].bundle.js",
-path: path.resolve(**dirname, "public"),
-},
-devServer: {
-static: {
-directory: path.join(**dirname, "/src/html"),
-},
-compress: true,
-port: 3000,
-},
-module: {
-rules: [
-{
-test: /.s?css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
-    ],
-  },
-  optimization: {
-    minimizer: [
-      new CssMinimizerPlugin(),
-      new TerserPlugin()
-    ],
-  },
-  plugins: [
-    new MinifyHtmlWebpackPlugin({
-      src: "./src/html",
-      dest: "./public",
-      rules: {
-        collapseBooleanAttributes: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true,
-        removeComments: true,
-        minifyJS: true,
-      },
-    }),
-    new MiniCssExtractPlugin(),
-    new PurgecssPlugin({
-      paths: glob.sync(`${PATHS.src}/\*_/_`, { nodir: true }), }), ], }; `
+[Spécialités de saison](https://api.gill-cote-bistro.fr/specials?_sort=id:asc) ;
+[Suggestions du jour](https://api.gill-cote-bistro.fr/suggestions?_sort=id:asc) ;
+[Histoire du restaurant](https://api.gill-cote-bistro.fr/histoires?_sort=id:asc) ;
+
+Pour plus de simplicité vous remarquerez que les ID associés aux différentes données de l'API sont
+déjà envoyés par ordre croissant. Je vous conseille de garder ça. Il existe d'ailleurs d'autres filtres
+et je vous invite à les essayer si vous le voulez.
+
+Référence pour les filtres :
+[dev doc de l'API](https://strapi.io/documentation/developer-docs/latest/developer-resources/content-api/content-api.html#filters)
+
+## But du jeu
+
+Réaliser une structure onepage reprenant les suggestions du jour, les spécialités de saison et en bonus si votre temps le permet
+l'histoire du restaurant pour mettre en avant le restaurant et ses produits. Faire le maximum pour avoir un code lisible et comprenable.
+
+## Ressources utiles
+
+[https://developer.mozilla.org/fr/docs/Web/API/Fetch_API](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API)
+[https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch)
+[https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web/5577766-compilez-et-executez-votre-code](https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web/5577766-compilez-et-executez-votre-code)
+[https://github.com/webpack-contrib/css-loader](https://github.com/webpack-contrib/css-loader)
+[https://webpack.js.org/guides/getting-started/](https://webpack.js.org/guides/getting-started/)
+[https://webpack.js.org/configuration/resolve/](https://webpack.js.org/configuration/resolve/)
+[https://ideas.byteridge.com/webpack-minifying-your-production-bundle/](https://ideas.byteridge.com/webpack-minifying-your-production-bundle/)
+
+https://webpack.js.org/configuration/resolve/
+
+## Site du restaurant actuel
+
+Ce restaurant est en ligne à cette [adresse](https://www.gill-cote-bistro.fr/) et utilise Strapi (backend) et Next JS (frontend).
